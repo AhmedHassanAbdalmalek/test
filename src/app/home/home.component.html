@@ -1,0 +1,33 @@
+
+<app-navbar></app-navbar>
+
+<!-- <p>hello {{name}}</p> -->
+<p>hello {{name}}</p>
+<div>
+    <label [style.color]="fontcolor">Enter your name</label>
+    <label [class.labelcolor]="iscolored">Enter your name</label>
+    <input type="text" class="form-control" [(ngModel)]="firstname">
+    <input type="button"class="btn btn-primary form-control" value="click" (click)="changename()" >
+
+</div>
+
+<!-- <img src={{image}}> -->
+<img [src]=image>
+
+<div class="container">
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"  [(ngModel)]="email">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" [(ngModel)]="password">
+    </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" required> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+</div>
+<app-footer></app-footer>
